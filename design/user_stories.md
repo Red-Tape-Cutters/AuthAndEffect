@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 $\color{yellow}{\text{Emma is a elderly patient.}}$
 $\color{green}{\text{She wants to use this tool to decide which insurance plan she wants to enroll next year.}}$
 $\color{cyan}{\text{She wants it to be simple, intuitive to compare among different insurance plans.}}$
@@ -15,7 +14,6 @@ $\color{yellow}{\text{Julia is a patient who was recently denied for the prior a
 $\color{green}{\text{She wants to use this tool to understand the prior authorization regulations and how payers are processing prior authorization.}}$
 $\color{cyan}{\text{She wants it to be informative and accurate.}}$
 $\color{magenta}{\text{She is technical but would also want to keep it simple to read the information.}}$
-=======
 
 $\color{yellow}{text{Ava-the journalist}}$
 $\color{green}{\text{Ava wants do some simple stats analysis so they can write about it.}}$
@@ -55,8 +53,8 @@ $\color{yellow}{text{who is the user}}$
 $\color{green}{\text{What do they want to do with the tool.}}$
 $\color{cyan}{text{What needs and desires do they want for the tool.}}$
 $\color{magenta}{text{What is their skill level.}}$
->>>>>>> 1996f7023ecbc1e840f02765a5aeb0272c831b99
-=======
+
+
 Who / their use / their wants of the system / their skill level
 
 a lawmaker / making sure they are getting the info they are requiring / needs to have pretty pictures for easy reference / not techincally skilled
@@ -67,8 +65,4 @@ an insurnace company C-suite / wants to compare their approval rates to the publ
 a doctor / wants to know the details of the approval process to better care for patients / wants to know the turrnaround times of the different requests / high skill
 a non-native english speaker / wants to see what their insurance is likely to cover / wants translated options to bring the info into theur native language / average skill
 an HR professional / wants to check between insurance plans to get the best coverage for their company / wants graphs to bring to their bosses / high skill
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/main
-=======
->>>>>>> 8c8249ed5eb9fa1b8f8ff028776482a2bbc47641
->>>>>>> 1996f7023ecbc1e840f02765a5aeb0272c831b99
+
