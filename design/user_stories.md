@@ -48,21 +48,42 @@ $\color{cyan}{text{No specific needs, just to play around with the data.}}$
 $\color{magenta}{text{He}}$
 
 
+$\color{yellow}{text{a lawmaker}}$
+$\color{green}{\text{making sure they are getting the info they are requiring}}$
+$\color{cyan}{text{needs to have pretty pictures for easy reference}}$
+$\color{magenta}{text{not techincally skilled}}$
 
-$\color{yellow}{text{who is the user}}$
-$\color{green}{\text{What do they want to do with the tool.}}$
-$\color{cyan}{text{What needs and desires do they want for the tool.}}$
-$\color{magenta}{text{What is their skill level.}}$
+$\color{yellow}{text{a primary care provider}}$
+$\color{green}{\text{want to know the approval rates of different treaments for the insurance providers}}$
+$\color{cyan}{text{they need any easy way of searching between similiar treatments}}$
+$\color{magenta}{text{high skill user.}}$
 
+$\color{yellow}{text{an HR professional}}$
+$\color{green}{\text{wants to check between insurance plans to get the best coverage for their company}}$
+$\color{cyan}{text{wants graphs to bring to their bosses}}$
+$\color{magenta}{text{high skill}}$
 
-Who / their use / their wants of the system / their skill level
+$\color{yellow}{text{member of public}}$
+$\color{green}{\text{wants to see what kind of elective services are covered by insurance}}$
+$\color{cyan}{text{needs to be easy to tell the different insurance plans}}$
+$\color{magenta}{text{of average skill}}$
 
-a lawmaker / making sure they are getting the info they are requiring / needs to have pretty pictures for easy reference / not techincally skilled
-a primary care provider / want to know the approval rates of different treaments for the insurance providers / they need any easy way of searching between similiar treatments / high skill user
-member of public / wants to see what kind of elective services are covered by insurance / needs to be easy to tell the different insurance plans / of average skill
-Mario's brother / wants to know the number of denied claims of each insurnace company / wants to know who the CEOs are / of average skill
-an insurnace company C-suite / wants to compare their approval rates to the published competition / wants to be able to check for outliers quickly / high skill
-a doctor / wants to know the details of the approval process to better care for patients / wants to know the turrnaround times of the different requests / high skill
-a non-native english speaker / wants to see what their insurance is likely to cover / wants translated options to bring the info into theur native language / average skill
-an HR professional / wants to check between insurance plans to get the best coverage for their company / wants graphs to bring to their bosses / high skill
+$\color{yellow}{text{Mario's brother}}$
+$\color{green}{\text{wants to know the number of denied claims of each insurnace company}}$
+$\color{cyan}{text{wants to know who the CEOs are}}$
+$\color{magenta}{text{of average skill}}$
 
+$\color{yellow}{text{an insurnace company C-suite}}$
+$\color{green}{\text{wants to compare their approval rates to the published competition}}$
+$\color{cyan}{text{wants to be able to check for outliers quickly}}$
+$\color{magenta}{text{high skill}}$
+
+$\color{yellow}{text{a doctor}}$
+$\color{green}{\text{wants to know the details of the approval process to better care for patients}}$
+$\color{cyan}{text{wants to know the turrnaround times of the different requests}}$
+$\color{magenta}{text{high skill}}$
+
+$\color{yellow}{text{a non-native english speaker}}$
+$\color{green}{\text{wants to see what their insurance is likely to cover}}$
+$\color{cyan}{text{wants translated options to bring the info into theur native language}}$
+$\color{magenta}{text{average skill}}$
