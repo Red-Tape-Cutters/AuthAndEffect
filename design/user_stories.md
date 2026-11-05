@@ -26,9 +26,14 @@ $\color{magenta}{text{Rob has done a lot of Coursera classes and he feels comfor
 
 
 
-$\color{yellow}{text{Who is the user.}}$
+$\color{yellow}{text{Mike - Health Economic PhD student}}$
+$\color{green}{\text{Mike wants to do some priliminary data analysis to see what tools are out there!}}$
+$\color{cyan}{text{No specific needs, just to play around with the data.}}$
+$\color{magenta}{text{He}}$
+
+
+
+$\color{yellow}{text{who is the user}}$
 $\color{green}{\text{What do they want to do with the tool.}}$
 $\color{cyan}{text{What needs and desires do they want for the tool.}}$
 $\color{magenta}{text{What is their skill level.}}$
-
-
