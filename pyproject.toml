@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authandeffect"
+version = "0.1.0"
+description = "Collect, standardize and visualize health insurer prior authorization metrics published under CMS-0057-F."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "AuthAndEffect contributors" }]
+keywords = ["health insurance", "prior authorization", "CMS-0057-F", "open data"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "pandas>=2.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+authandeffect = "authandeffect.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+authandeffect = ["data/*.yaml", "data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+
+[tool.coverage.run]
+source = ["authandeffect"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# E/W: pycodestyle, F: pyflakes, I: isort, B: bugbear, UP: pyupgrade, D: docstrings
+select = ["E", "W", "F", "I", "B", "UP", "D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

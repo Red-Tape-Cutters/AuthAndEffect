@@ -1,0 +1,222 @@
+# Source registry: where payers publish CMS-0057-F prior authorization metrics.
+# Compiled during the week-1 data spike (2026-10-30). See doc/data_inventory.md.
+#
+# status:  located      = report(s) found and opened
+#          partial      = some reports found, coverage or URL still to confirm
+#          not_located  = no report found yet
+# granularity follows CMS guidance: MA by contract, managed care by plan,
+# FFS by state, QHP by issuer. "region" = one file per region with several contracts.
+
+payer_sources:
+  - id: uhc-ma
+    parent_org: UnitedHealth Group
+    brand: UnitedHealthcare
+    segment: medicare_advantage
+    granularity: contract
+    formats: [pdf]
+    status: located
+    index_url: https://www.uhc.com/legal/cms-interoperability-prior-authorization/medicare-advantage
+    example_url: https://www.uhc.com/content/dam/uhcdotcom/en/Legal/PDF/CMS-Interoperability-Medicare-Advantage-2025.pdf
+    notes: >-
+      One combined PDF with a section per H-contract. Landing page says the figures were
+      reviewed by FTI Consulting. Non-integrated entities are reported separately.
+
+  - id: uhc-medicaid
+    parent_org: UnitedHealth Group
+    brand: UnitedHealthcare Community Plan
+    segment: medicaid_mco
+    granularity: plan
+    formats: [pdf]
+    status: partial
+    example_url: https://uhc-gpd-preview.uhc.com/content/dam/uhcdotcom/en/Legal/PDF/CMS-Interoperability-Medicaid-2025.pdf
+    notes: >-
+      Found only on a "preview" subdomain; confirm the production URL on
+      https://www.uhc.com/legal/cms-interoperability-prior-authorization before use.
+
+  - id: humana-ma
+    parent_org: Humana
+    brand: Humana
+    segment: medicare_advantage
+    granularity: contract
+    formats: [pdf]
+    status: located
+    index_url: https://provider.humana.com/coverage-claims/prior-authorizations/prior-authorization-metrics
+    example_url: https://assets.humana.com/is/content/humana/Humana_H1468_Prior_Auth_Metrics_PlanYear2025pdf
+    url_pattern: https://assets.humana.com/is/content/humana/Humana_{contract}_Prior_Auth_Metrics_PlanYear2025pdf
+    notes: >-
+      One PDF per contract with a predictable URL. Subsidiaries use other prefixes
+      (CarePlus_H1019_..., iCare_H2237_...). Index page also links a contract crosswalk.
+      Times in whole days (standard) and whole hours (expedited).
+
+  - id: humana-medicaid
+    parent_org: Humana
+    brand: Humana Healthy Horizons
+    segment: medicaid_mco
+    granularity: plan
+    formats: [pdf]
+    status: located
+    example_url: https://assets.humana.com/is/content/humana/Humana_VA_Prior_Auth_Metrics_PlanYear2025pdf
+    url_pattern: https://assets.humana.com/is/content/humana/Humana_{state}_Prior_Auth_Metrics_PlanYear2025pdf
+    notes: One PDF per state plan (seen for VA, OH, LA, SC, KY). Same layout as humana-ma.
+
+  - id: aetna-ma
+    parent_org: CVS Health
+    brand: Aetna Medicare
+    segment: medicare_advantage
+    granularity: contract
+    formats: [pdf]
+    status: partial
+    index_url: https://www.aetna.com/health-care-professionals/prior-authorization-statistics.html
+    example_url: https://www.aetnabetterhealth.com/content/dam/aetna/medicaid/virginia-dsnp/provider/pdf/abhvadsnp_PA_metric_reporting_template_MA_v3_Approved_H1610.pdf
+    notes: >-
+      Index URL comes from a third-party write-up and has not been opened yet. Example is a
+      D-SNP contract (H1610) that follows the CMS template.
+
+  - id: aetna-medicaid
+    parent_org: CVS Health
+    brand: Aetna Better Health
+    segment: medicaid_mco
+    granularity: plan
+    formats: [pdf]
+    status: located
+    example_url: https://ru.aetnabetterhealth.com/content/dam/aetna/pdfs/2025_ABHTX_CMS_Web_Metrics-Provider.pdf
+    url_pattern: https://www.aetnabetterhealth.com/content/dam/aetna/pdfs/2025_ABH{state}_CMS_Web_Metrics-Provider.pdf
+    notes: >-
+      Per-state PDFs (seen TX, NJ, PA CHIP). Adds a "Key Highlights" box (total
+      processed, % on time) above the CMS-template tables. URL pattern is a guess from
+      two examples; NJ lives under a different folder.
+
+  - id: kaiser-ma
+    parent_org: Kaiser Permanente
+    brand: Kaiser Foundation Health Plans
+    segment: medicare_advantage
+    granularity: region
+    formats: [pdf, xml]
+    status: located
+    index_url: https://healthy.kaiserpermanente.org/legal-regulatory/reports/cms-prior-authorization
+    example_url: https://healthy.kaiserpermanente.org/content/dam/kporg/legal/prior-authorization-metrics-report-wa-en.pdf
+    url_pattern: https://healthy.kaiserpermanente.org/content/dam/kporg/legal/prior-authorization-metrics-report-{region}-en.pdf
+    notes: >-
+      One report per region (ncal, scal, wa, nw, mas, ...), tables by contract ID. Each
+      region also has an XML version - the only major MA payer seen with a
+      machine-readable file. Same report contains Medicaid and QHP sections. Times
+      printed as "1 Days 0 Hours".
+
+  - id: elevance-ma
+    parent_org: Elevance Health
+    brand: Anthem Blue Cross Blue Shield
+    segment: medicare_advantage
+    granularity: contract
+    formats: [pdf]
+    status: partial
+    example_url: https://www.anthem.com/content/dam/digital/docs/anthem/medicare-2-0/medicare-advantage/H5854-medicare-prior-auths-metrics.pdf
+    url_pattern: https://www.anthem.com/content/dam/digital/docs/anthem/medicare-2-0/medicare-advantage/{contract}-medicare-prior-auths-metrics.pdf
+    notes: >-
+      One PDF per contract (seen H5854, H4471, H9065; Spanish versions add "-es"; contract
+      case varies). anthem.com disallows automated fetching in robots.txt, so these must be
+      downloaded by hand; do not script around it. Same "Scorecard" layout as Wellpoint.
+
+  - id: wellpoint-ma
+    parent_org: Elevance Health
+    brand: Wellpoint
+    segment: medicare_advantage
+    granularity: contract
+    formats: [pdf]
+    status: located
+    example_url: https://www.wellpoint.com/content/dam/digital/wellpoint/documents/medicare/medicare-advantage/H8849-medicare-prior-auths-metrics.pdf
+    url_pattern: https://www.wellpoint.com/content/dam/digital/wellpoint/documents/medicare/medicare-advantage/{contract}-medicare-prior-auths-metrics.pdf
+    notes: >-
+      Elevance "Scorecard" layout: header line, then a numbered list of percentages (no
+      counts or denominators). Decision times have no unit; footnote says "1 day means up
+      to 24 hours", so values are days. Appeal and extension rows are not split by request
+      type. No index page found yet; contract list must come from the CMS plan directory.
+
+  - id: elevance-medicaid
+    parent_org: Elevance Health
+    brand: Anthem / Wellpoint Medicaid
+    segment: medicaid_mco
+    granularity: issuer
+    formats: [pdf, html]
+    status: partial
+    example_url: https://www.anthembluecross.com/content/dam/digital/docs/anthembluecross/medicaid/new-york/ny_medicaid_authandeffectsmetrics.pdf
+    url_pattern: https://www.anthembluecross.com/content/dam/digital/docs/anthembluecross/medicaid/{state_name}/{state}_medicaid_authandeffectsmetrics.pdf
+    notes: >-
+      NY report covers "Issuer G0606 Anthem HP, LLC", all plans and contracts, same
+      Scorecard layout as wellpoint-ma. Virginia is an HTML page on anthem.com
+      (/va/medicaid/prior-authorization-report), which blocks automated fetching. A
+      third-party summary also cites IN, CA and WI reports; URLs not yet confirmed.
+
+  - id: centene-ma
+    parent_org: Centene
+    brand: Wellcare
+    segment: medicare_advantage
+    granularity: contract
+    formats: [pdf]
+    status: located
+    index_url: https://www.wellcare.com/california/providers/medicare/authorizations
+    example_url: https://www.wellcare.com/-/media/pdfs/na/provider/cms-final-rule-py2025/wa_wellcare_medicare_h0029_metricssummary_r.ashx
+    url_pattern: https://www.wellcare.com/-/media/pdfs/na/provider/cms-final-rule-py2025/{state}_wellcare_medicare_{contract}_metricssummary_r.ashx
+    notes: >-
+      One PDF per contract, consistent table layout plus a sentence summary. The state
+      prefix in the URL is a website folder, not a reliable contract state (H2775 appears
+      under both "me" and "ny"). Expedited times in whole days.
+
+  - id: centene-medicaid
+    parent_org: Centene
+    brand: Centene state plans (Health Net, SilverSummit, ...)
+    segment: medicaid_mco
+    granularity: plan
+    formats: [pdf]
+    status: partial
+    index_url: https://www.healthnet.com/content/healthnet/en_us/providers/prior-auth-menu/prior-auth-performance-metrics.html
+    notes: >-
+      Each state brand hosts its own "Metrics Summary" PDF (same layout as Wellcare).
+      Needs one registry entry per state plan; only CA (Health Net) and NV (SilverSummit)
+      pages seen so far.
+
+  - id: molina-medicaid
+    parent_org: Molina Healthcare
+    brand: Molina Healthcare
+    segment: medicaid_mco
+    granularity: plan
+    formats: [html]
+    status: located
+    index_url: https://molinahealthcare.com/providers/tx/medicaid/forms/PA
+    notes: >-
+      Metrics are an HTML table embedded in each state's provider forms page (seen TX,
+      MI, KY, UT, WI, NE). Percentages are whole numbers, times in hours, no counts.
+
+  - id: molina-ma
+    parent_org: Molina Healthcare
+    brand: Molina / Senior Whole Health
+    segment: medicare_advantage
+    granularity: contract
+    formats: [html]
+    status: partial
+    index_url: https://www.molinahealthcare.com/providers/ny/swh/forms/prior-auth-reporting.aspx
+    notes: HTML tables per contract (H5992 NY, H2224 MA). Molina is exiting MAPD for 2027.
+
+reference_datasets:
+  - id: cms-ma-enrollment-by-contract
+    name: CMS Monthly Enrollment by Contract
+    publisher: CMS
+    url: https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data
+    granularity: contract x month
+    join_key: entity_id (contract number, e.g. H0029)
+    purpose: Weight contract-level PA metrics by enrollment when aggregating to parent org.
+
+  - id: cms-ma-plan-directory
+    name: MA Plan Directory
+    publisher: CMS
+    url: https://cms.gov/data-research/statistics-trends-and-reports/medicare-advantagepart-d-contract-and-enrollment-data/ma-plan-directory
+    granularity: contract
+    join_key: entity_id (contract number)
+    purpose: Map contracts to legal entity and parent organization.
+
+  - id: wa-health-plan-pa-data
+    name: Washington Health Plan Prior Authorization Data
+    publisher: Washington State (data.wa.gov)
+    url: https://data.wa.gov/d/fysr-7kwx
+    granularity: carrier x service category
+    join_key: parent_org / carrier name (fuzzy)
+    purpose: Stretch goal - service-level detail that the federal metrics lack.
