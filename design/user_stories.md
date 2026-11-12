@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### User Story 1
 
 $\color{yellow}{\text{Maria is a health policy researcher at a think tank.}}$
@@ -54,91 +53,113 @@ $\color{yellow}{\text{James is a state insurance regulator's analyst.}}$
 $\color{green}{\text{He wants to compare how insurers in his state perform against national averages, so he can decide which insurers to ask for more information.}}$
 $\color{cyan}{\text{James hopes the tool combines insurer reports with CMS enrollment data, so large insurers count more than small ones.}}$
 $\color{magenta}{\text{He has intermediate skills and uses Python occasionally with a colleague's help.}}$
-=======
+
+### User Story 9
 
 $\color{yellow}{\text{Emma is a elderly patient.}}$
 $\color{green}{\text{She wants to use this tool to decide which insurance plan she wants to enroll next year.}}$
 $\color{cyan}{\text{She wants it to be simple, intuitive to compare among different insurance plans.}}$
 $\color{magenta}{\text{She is not a technical person and she does not have much experience using interative platforms.}}$
 
+### User Story 10
 
 $\color{yellow}{\text{Helen is a PhD student studying insurance designs and health policy.}}$
 $\color{green}{\text{She wants to use this tool to understand the prior authorization regulations and how payers are processing prior authorization.}}$
 $\color{cyan}{\text{She wants it to be informative and accurate.}}$
 $\color{magenta}{\text{She is technical but would also want to keep it simple to read the information.}}$
 
+### User Story 11
+
 $\color{yellow}{\text{Julia is a patient who was recently denied for the prior authorization for the treatment she received.}}$
 $\color{green}{\text{She wants to use this tool to understand the prior authorization regulations and how payers are processing prior authorization.}}$
 $\color{cyan}{\text{She wants it to be informative and accurate.}}$
 $\color{magenta}{\text{She is technical but would also want to keep it simple to read the information.}}$
+
+### User Story 12
 
 $\color{yellow}{\text{Ava-the journalist}}$
 $\color{green}{\text{Ava wants do some simple stats analysis so they can write about it.}}$
 $\color{cyan}{\text{Ava wants it to be easy enough to use but give them enough flexibility on what variables they are looking at.}}$
 $\color{magenta}{\text{Ava is fairly comfortable with using the computer but she doesnt have a background in computationally advanced skill sets! }}$
 
+### User Story 13
 
 $\color{yellow}{\text{Jackson-the data analyst for CMS}}$
 $\color{green}{\text{Jackson needs to QC and QA the published data!}}$
 $\color{cyan}{\text{Jackson needs to make sure the impacted payers are providing all the requirements and there are any missing data He needs to take a deeper dive into the data and be able to flag the outlier values for example.}}
 $\color{magenta}{\text{Jackson has been working as a data analyst for 7 years!}}$
 
-
+### User Story 14
 
 $\color{yellow}{\text{Sheila - patient advocate: works for a nonprofit who helps individuals sign up for healthcare insurance. }}$
 $\color{green}{\text{Sheila needs to figure out which insurance plans would be a better fit for the individuals }}$
 $\color{cyan}{\text{Sheila needs to have a quick and easy way to interact with the data and find the best plan for the individuals  }}$
 $\color{magenta}{\text{Sheila never had a formal training but she is pretty tech-savvy and is willing to help whatever needed if she finds it valuable.}}$
 
-
+### User Story 15
 
 $\color{yellow}{\text{Rob - patient financial services specialist }}$
 $\color{green}{\text{Rob wants to get a better feel for which insurance plans he has to be more proactive and set expectations!}}$
 $\color{cyan}{\text{Rob wants it to be fast and easy to use, and he can use it on his work computer given all the hospital's IT restrictions}}$
 $\color{magenta}{\text{Rob has done a lot of Coursera classes and he feels comfortable with Python!}}$
 
-
+### User Story 16
 
 $\color{yellow}{\text{Mike - Health Economic PhD student}}$
 $\color{green}{\text{Mike wants to do some priliminary data analysis to see what tools are out there!}}$
 $\color{cyan}{\text{No specific needs, just to play around with the data.}}$
 $\color{magenta}{\text{He}}$
 
+### User Story 17
 
 $\color{yellow}{\text{a lawmaker}}$
 $\color{green}{\text{making sure they are getting the info they are requiring}}$
 $\color{cyan}{\text{needs to have pretty pictures for easy reference}}$
 $\color{magenta}{\text{not techincally skilled}}$
 
+### User Story 18
+
 $\color{yellow}{\text{a primary care provider}}$
 $\color{green}{\text{want to know the approval rates of different treaments for the insurance providers}}$
 $\color{cyan}{\text{they need any easy way of searching between similiar treatments}}$
 $\color{magenta}{\text{high skill user.}}$
+
+### User Story 19
 
 $\color{yellow}{\text{an HR professional}}$
 $\color{green}{\text{wants to check between insurance plans to get the best coverage for their company}}$
 $\color{cyan}{\text{wants graphs to bring to their bosses}}$
 $\color{magenta}{\text{high skill}}$
 
+### User Story 20
+
 $\color{yellow}{\text{member of public}}$
 $\color{green}{\text{wants to see what kind of elective services are covered by insurance}}$
 $\color{cyan}{\text{needs to be easy to tell the different insurance plans}}$
 $\color{magenta}{\text{of average skill}}$
+
+### User Story 21
 
 $\color{yellow}{\text{Mario's brother}}$
 $\color{green}{\text{wants to know the number of denied claims of each insurnace company}}$
 $\color{cyan}{\text{wants to know who the CEOs are}}$
 $\color{magenta}{\text{of average skill}}$
 
+### User Story 22
+
 $\color{yellow}{\text{an insurnace company C-suite}}$
 $\color{green}{\text{wants to compare their approval rates to the published competition}}$
 $\color{cyan}{\text{wants to be able to check for outliers quickly}}$
 $\color{magenta}{\text{high skill}}$
 
+### User Story 23
+
 $\color{yellow}{\text{a doctor}}$
 $\color{green}{\text{wants to know the details of the approval process to better care for patients}}$
 $\color{cyan}{\text{wants to know the turrnaround times of the different requests}}$
 $\color{magenta}{\text{high skill}}$
+
+### User Story 24
 
 $\color{yellow}{\text{a non-native english speaker}}$
 $\color{green}{\text{wants to see what their insurance is likely to cover}}$
