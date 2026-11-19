@@ -1,0 +1,22 @@
+[project]
+name = "authandeffect"
+dynamic = ["version"]
+authors = [
+{name="Sharareh Koufigar", email="koufigar@uw.edu"},
+{name="David Ward", email="dward2@uw.edu"},
+{name="Ruihan Qin", email="rq33@uw.edu"},
+{name="Xiangyuan Su", email="xsu5@uw.edu"},
+]
+description = "This package organizes the pre-authorization data from all major insurance companies across the United States and provides a framework for analyzing the data."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+"numpy>=1.25",
+"pandas>=2.1",
+]
+classifiers = [
+"Programming Language :: Python :: 3",
+"License :: OSI Approved :: MIT License",
+"Operating System :: OS Independent",
+]
+[tool.setuptools_scm]
