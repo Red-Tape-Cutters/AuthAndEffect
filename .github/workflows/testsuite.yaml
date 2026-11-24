@@ -29,7 +29,7 @@ jobs:
           miniforge-version: latest
           python-version: ${{ env.PYTHON }}
           environment-file: environment.yaml
-          activate-environment: ${{ env.authandeffect }}
+          activate-environment: authandeffect
           conda-remove-defaults: "true"
 
       - name: Conda Info
