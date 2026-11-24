@@ -1,6 +1,0 @@
-name: authandeffect
-channels:
-  - conda-forge
-dependencies:
-  - numpy
-  - pip
